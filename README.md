@@ -9,28 +9,7 @@ item drops, or commands other than `/login`/`/register`.
 
 ## How this was built
 
-FourKit ships a real, undocumented-but-functional plugin system
-(`Minecraft.Server.FourKit.dll`, loaded from the server's `runtime/` folder).
-Rather than guess at its API, I disassembled the actual DLL from your
-uploaded server build (`monodis`) and wrote this plugin directly against the
-verified interfaces:
-
-- `Minecraft.Server.FourKit.Plugin.ServerPlugin` — base class; override the
-  `name`/`version`/`author` properties and `onEnable()`/`onDisable()`.
-- `Minecraft.Server.FourKit.Event.Listener` + `[EventHandler]` — Bukkit-style
-  event subscription (`FourKit.addListener(this)`).
-- `Minecraft.Server.FourKit.Command.CommandExecutor` +
-  `FourKit.getCommand("x").setExecutor(this)` — command registration. There's
-  no manifest file (no `plugin.yml`/`plugin.json`) — the loader just scans
-  `plugins/*.dll` for classes deriving from `ServerPlugin`.
-- Events used: `PlayerJoinEvent`, `PlayerQuitEvent`, `PlayerMoveEvent`,
-  `PlayerChatEvent`, `PlayerCommandPreprocessEvent`, `PlayerInteractEvent`,
-  `PlayerInteractEntityEvent`, `PlayerDropItemEvent`.
-
-I then installed the .NET 10 SDK and **actually compiled this project**
-against the real `Minecraft.Server.FourKit.dll` extracted from your zip —
-it builds with 0 errors, 0 warnings, confirming the code is correct against
-the genuine API rather than a guess.
+This was vibe-coded with claude an me viewing the code, This was more of a beginner project were I wanted it to "just work" so please dont expect the code to be very pretty.
 
 ## Installing
 
