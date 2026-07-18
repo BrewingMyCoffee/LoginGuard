@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>LoginGuard</AssemblyName>
+    <RootNamespace>LoginGuard</RootNamespace>
+    <!-- The FourKit host loads plugin DLLs directly out of the plugins/ folder,
+         so we don't want NuGet/runtime dependencies copied alongside it. -->
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Reference assembly only: this DLL already ships inside the server's
+         runtime/ folder and is loaded by the host process itself, so we must
+         NOT copy it into our output (Private=false) or we'll get duplicate-type
+         load conflicts at runtime. -->
+    <Reference Include="Minecraft.Server.FourKit">
+      <HintPath>lib/Minecraft.Server.FourKit.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
