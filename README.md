@@ -17,7 +17,7 @@ This was vibe-coded with claude and me viewing the code, This was more of a begi
    folder that ships empty in the FourKit zip, next to `Minecraft.Server.exe`).
 2. Restart the server. You should see in the console:
    ```
-   Loaded plugin: LoginGuard v1.0.0 by Claude for Anthropic
+   Loaded plugin: LoginGuard v1.0.0
    Enabled: LoginGuard
    [LoginGuard] enabled - 0 account(s) loaded.
    ```
