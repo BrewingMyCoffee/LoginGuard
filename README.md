@@ -72,5 +72,4 @@ dotnet build -c Release
 
 `LoginGuard.csproj` references `lib/Minecraft.Server.FourKit.dll` — copy that
 DLL out of your server's `runtime/` folder into a `lib/` folder next to the
-`.csproj` before building (not included here to keep this small; it's the
-same DLL Anthropic already has on file from your upload).
+`.csproj` before building (not included here to keep this small)
