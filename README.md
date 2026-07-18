@@ -63,11 +63,7 @@ This was vibe-coded with claude and me viewing the code, This was more of a begi
   enabling this, the simplest fix is to delete the `_timeoutTimer` block in
   `onEnable()`/`onDisable()` — everyone will still be frozen out until they
   log in, they just won't be auto-kicked for going AFK before doing so.
-- Only tested by compiling against the shipped DLL — I don't have a way to
-  actually launch the dedicated server from here, so in-game behavior
-  (freezing, message text, etc.) hasn't been verified against a live server.
-  Please test on a non-production server first.
-
+  
 ## Rebuilding from source
 
 ```
