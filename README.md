@@ -9,7 +9,7 @@ item drops, or commands other than `/login`/`/register`.
 
 ## How this was built
 
-This was vibe-coded with claude an me viewing the code, This was more of a beginner project were I wanted it to "just work" so please dont expect the code to be very pretty.
+This was vibe-coded with claude and me viewing the code, This was more of a beginner project were I wanted it to "just work" so please dont expect the code to be very pretty.
 
 ## Installing
 
